@@ -2,3 +2,7 @@ ifconfig eth0 10.10.1.1/24
 ifconfig eth1 192.168.1.1/24
 
 /etc/init.d/dhcp3-server start
+
+iptables -t nat -A POSTROUTING -j MASQUERADE
+
+sysctl -w net.ipv4.ip_forward=1
