@@ -1,0 +1,7 @@
+ifconfig eth0 192.168.1.2/24
+
+echo "nameserver 192.168.10.1" > /etc/resolv.conf
+
+/etc/init.d/dhcp3-server start
+
+
