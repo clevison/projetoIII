@@ -1,1 +1,5 @@
+r1:dhcp
+proxy:r1
 pc1:r1
+web:r1
+
