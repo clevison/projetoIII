@@ -13,7 +13,7 @@ sysctl -w net.ipv4.ip_forward=1
 iptables -t nat -A PREROUTING -p tcp -d 192.168.100.2 --dport 80 -j DNAT --to 10.10.1.5:80
 
 #Proxy
-iptables -t nat -A PREROUTING -p tcp -s 192.168.1.0/24 --dport 80 -j DNAT --to 10.10.1.10:3128
+iptables -t nat -A PREROUTING -p tcp -s 192.168.1.0/24 --dport 80 -j DNAT --to 10.10.1.2:3128
 
 #Facebook
 iptables -A INPUT -p tcp --dport 80 -d 157.240.12.35 -j DROP
